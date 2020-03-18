@@ -17,8 +17,9 @@
     <h2>ENVIE DE DEVENIR CLIENTS? clique <a href="form.php">ici</a></h2>
     <h2>UN CONCERT EN VUE? rajoute le <a href="showForm.php">ici</a></h2>
     <h2>Une erreur dans tes données? clique<a href="update.php">ici</a></h2>
-    <h2>Une erreur dans tes données? clique<a href="updateShow.php">ici</a></h2>
+    <h2>Besoin de modifier les infos d'un show? clique<a href="updateShow.php">ici</a></h2>
     <h2>Voici la liste des clients présents</h2>
+    <h2>On te degage de la liste des clients par <a href="delete.php">ici</a></h2>
     <?= doubleLoop($clients) ?>
 
 

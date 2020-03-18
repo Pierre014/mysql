@@ -40,10 +40,4 @@
         header('location:read.php');
     }
 
-    function connectedToSession($login, $pwd){
-
-        
-
-    }
-
 ?>
