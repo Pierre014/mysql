@@ -2,17 +2,7 @@
 
     require 'sqlconnect.php';
     require 'function.php';
-
-    $clients = selectData($pdo,"SELECT * FROM clients");
-    $shows = selectData($pdo,"SELECT type FROM showTypes");
-    $twentyClients = selectData($pdo,"SELECT * FROM clients LIMIT 0,20");
-    $mClients = selectData($pdo,"SELECT lastname, firstname FROM clients 
-                            WHERE lastname LIKE 'M%' ORDER BY lastname ASC ");
-    $fidelCLients = selectData($pdo,"SELECT * FROM clients
-                                LEFT JOIN cards ON clients.cardNumber = cards.cardNumber WHERE clients.card =1 AND cards.cardTypesid =1");
-    
-    $showInfo = selectData($pdo, "SELECT title, performer, date, startTime FROM shows");                         
-    
+                           
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +16,8 @@
 
     <h2>ENVIE DE DEVENIR CLIENTS? clique <a href="form.php">ici</a></h2>
     <h2>UN CONCERT EN VUE? rajoute le <a href="showForm.php">ici</a></h2>
+    <h2>Une erreur dans tes données? clique<a href="update.php">ici</a></h2>
+    <h2>Une erreur dans tes données? clique<a href="updateShow.php">ici</a></h2>
     <h2>Voici la liste des clients présents</h2>
     <?= doubleLoop($clients) ?>
 

@@ -38,4 +38,14 @@
 
 
 
-?>
+//execute function
+
+    $clients = selectData($pdo,"SELECT * FROM clients");
+    $shows = selectData($pdo,"SELECT type FROM showTypes");
+    $twentyClients = selectData($pdo,"SELECT * FROM clients LIMIT 0,20");
+    $mClients = selectData($pdo,"SELECT lastname, firstname FROM clients 
+                            WHERE lastname LIKE 'M%' ORDER BY lastname ASC ");
+    $fidelCLients = selectData($pdo,"SELECT * FROM clients
+                                LEFT JOIN cards ON clients.cardNumber = cards.cardNumber WHERE clients.card =1 AND cards.cardTypesid =1");
+    
+    $showInfo = selectData($pdo, "SELECT title, performer, date, startTime FROM shows"); 
